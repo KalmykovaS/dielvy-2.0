@@ -1,0 +1,105 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* rubik-regular - latin_cyrillic */
+@font-face {
+  font-family: "Rubik";
+  font-weight: 400;
+  src: url("../fonts/rubik-v11-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/rubik-v11-latin_cyrillic-regular.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+
+/* rubik-500 - latin_cyrillic */
+@font-face {
+  font-family: "Rubik Medium";
+  font-weight: 500;
+  src: url("../fonts/rubik-v11-latin_cyrillic-500.woff2") format("woff2"), url("../fonts/rubik-v11-latin_cyrillic-500.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+
+/* rubik-700 - latin_cyrillic */
+@font-face {
+  font-family: "Rubik Bold";
+  font-weight: 700;
+  src: url("../fonts/rubik-v11-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/rubik-v11-latin_cyrillic-700.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+
+@import "variables.scss";
+@import "mixins.scss";
+@import "blocks/header.scss";
+@import "blocks/intro.scss";
+@import "blocks/feature.scss";
+@import "blocks/about.scss";
+@import "blocks/contacts.scss";
+@import "blocks/modal.scss";
+@import "blocks/footer.scss";
+
+.page {
+  margin: 0 auto;
+  max-width: $desktop-width;
+  min-width: $mobile-width;
+  font-family: $font-regular;
+  font-size: 14px;
+  line-height: 1.2;
+  color: $lite-grey;
+}
+
+.container {
+  max-width: 1760px;
+  min-width: 290px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.site-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -55px;
+  visibility: hidden;
+}
+
+.button {
+  font-size: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+}
+
+.main-button {
+  border: none;
+  background-color: #3680DB;
+  font-size: 12px;
+  font-family: $font-semibold;
+  max-width: 200px;
+  padding: 10px;
+  color: #ffffff;
+  white-space: nowrap;
+  border-radius: 30px;
+}

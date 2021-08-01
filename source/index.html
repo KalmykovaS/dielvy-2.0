@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <title>Диэлви: Подобрать АВР</title>
+  <link rel="preload" href="fonts/rubik-v11-latin_cyrillic-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/rubik-v11-latin_cyrillic-500.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/rubik-v11-latin_cyrillic-700.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement("picture");
+  </script>
+  <script src="js/picturefill.min.js" async=""></script>
+</head>
+<body class="page">
+
+  <!-- HEADER -->
+  <header class="page__header header">
+    <div class="header__wrapper">
+      <div class="header__logo logo">
+        <picture>
+          <source media="(min-width: 1400px)" srcset="img/logo_desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo_tablet.svg">
+          <img class="logo__image" src="img/logo_mobile.svg" alt="Логотип Диэлви">
+        </picture>
+      </div>
+
+      <nav class="header__nav main-nav main-nav--closed">
+        <button class="main-nav__toggle button" type="button" onclick="toggleMenu()">Открыть/закрыть меню
+        </button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list navigation site-list">
+            <li class="navigation__item">
+              <a class="navigation__link navigation__link--first" href="#feature" onclick="closeMenu()">Подобрать АВР</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#gallery" onclick="closeMenu()">Наша продукция</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#about" onclick="closeMenu()">О компании</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#contacts" onclick="closeMenu()">Контакты</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link navigation__link--last" href="tel:+78129821479">+7&nbsp;812&nbsp;982&nbsp;14&nbsp;79</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <a class="header__link" href="tel:+78129821479">+7&nbsp;812&nbsp;982&nbsp;14&nbsp;79</a>
+    </div>
+  </header>
+  <!--  -->
+
+  <!-- MAIN -->
+  <main class="page__main main">
+    <section class="main__intro intro">
+      <div class="container">
+        <div class="intro__wrapper promo">
+          <div class="promo__content promo-content">
+            <h1 class="promo-content__header">Производство электрощитового оборудования</h1>
+            <button class="main-button" type="button">Отправить запрос</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="main__feature feature">
+      <a class="anchor" id="feature"></a>
+      <div class="container">
+        <h2 class="feature__title sub-header">Подберите АВР под свои задачи</h2>
+        <ul class="feature__list advantages site-list">
+          <li class="advantages__item">
+            <picture>
+              <source media="(min-width: 1400px)" srcset="img/feature_rkf_desktop@1x.jpg 1x, img/feature_rkf_desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/feature_rkf_tablet@1x.jpg 1x, img/feature_rkf_tablet@2x.jpg 2x">
+              <img class="advantages__image" src="img/feature_rkf_mobile@1x.jpg" srcset="img/feature_rkf_mobile@2x.jpg 2x" alt="АВР с РКФ">
+            </picture>
+            <div class="advantages__content">
+              <div class="advantages__wrapper">
+                <h3 class="advantages__title title-small">АВР с РКФ</h3>
+                <p class="advantages__text text">Широкий выбор реле измерения и контроля позволяют отслеживать текущие параметры</p>
+              </div>
+              <a class="advantages__link text text--yellow" onclick="showPopup('.modal--first')">Подробнее</a>
+            </div>
+          </li>
+          <li class="advantages__item">
+            <picture>
+              <source media="(min-width: 1400px)" srcset="img/feature_controllers_desktop@1x.jpg 1x, img/feature_controllers_desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/feature_controllers_tablet@1x.jpg 1x, img/feature_controllers_tablet@2x.jpg 2x">
+              <img class="advantages__image" src="img/feature_controllers_mobile@1x.jpg" srcset="img/feature_controllers_mobile@2x.jpg 2x" alt="АВР контроллеры">
+            </picture>
+            <div class="advantages__content">
+              <div class="advantages__wrapper">
+                <h3 class="advantages__title title-small">АВР контроллеры</h3>
+                <p class="advantages__text text">Контроллеры АВР выполнены в специальном компактном корпусе, в котором современный</p>
+              </div>
+              <a class="advantages__link text text--yellow" onclick="showPopup('.modal--second')">Подробнее</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="main__about-company about-company">
+      <a class="anchor" id="about"></a>
+      <div class="container">
+        <div class="about-company__container presentation">
+          <div class="presentation__content">
+            <h2 class="presentation__title sub-header">О компании</h2>
+            <p class="presentation__text text">ООО «Диэлви» — занимается производством электрощитового оборудования, по типовым и индивидуальным схемам заказчика. Имея многолетний опыт в производстве комплектных устройств низкого и среднего напряжения, постараемся удовлетворить все ваши потребности.</p>
+            <p class="presentation__text text">Осуществим разработку распределительных устройств по вашему техническому заданию.</p>
+            <p class="presentation__text text">Наши специалисты проконсультируют и помогут подобрать оборудование и комплектующие в соотвествии с вашими условиями.</p>
+          </div>
+          <div class="presentation__wrapper-image">
+            <picture>
+              <source media="(min-width: 1400px)" srcset="img/logo_about_company_desktop@1x.png 1x,img/logo_about_company_desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo_about_company_tablet@1x.png 1x, img/logo_about_company_tablet@2x.png 2x">
+              <img class="presentation__image" src="img/logo_about_company_mobile@1x.png" srcset="img/logo_about_company_mobile@2x.png 2x" alt="Логотип">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="main__feedback feedback">
+      <a class="anchor" id="contacts"></a>
+      <div class="container">
+        <h2 class="feedback__title sub-header">Контакты</h2>
+        <div class="feedback__container contacts">
+          <div class="contacts__information">
+            <p class="contacts__text text-bold"><a class="contacts__phone" href="tel:+78129821479">+7&nbsp;812&nbsp;982&nbsp;14&nbsp;79</a></p>
+            <p class="contacts__text text">Выборгское шоссе, 36, Санкт-петербург, Россия</p>
+            <p class="contacts__text text-bold">E-mail: <a class="contacts__mail" href="mailto:office@dlv.spb.ru">office@dlv.spb.ru</a></p>
+          </div>
+          <div class="contacts__map map">
+            <picture>
+              <source media="(min-width: 1400px)" srcset="img/map_desktop@1x.jpg 1x, img/map_desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/map_tablet@1x.jpg 1x, img/map_tablet@2x.jpg 2x">
+              <img class="map__image" src="img/map_mobile@1x.jpg" srcset="img/map_mobile@2x.jpg 2x" alt="Карта Диэлви">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="main__modal modal modal--first">
+      <div class="modal__container">
+        <h2 class="modal__title title-small">Щит АВР на базе реле контроля</h2>
+        <button class="modal__close button" onclick="closePopup()">Закрыть</button>
+        <div class="modal__wrapper">
+          <picture>
+            <source media="(min-width: 1400px)" srcset="img/feature_rkf_desktop@1x.jpg 1x, img/feature_rkf_desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/feature_rkf_tablet@1x.jpg 1x, img/feature_rkf_tablet@2x.jpg 2x">
+            <img class="modal__image" src="img/feature_rkf_mobile@1x.jpg" srcset="img/feature_rkf_mobile@2x.jpg 2x" alt="АВР с РКФ">
+          </picture>
+          <div class="modal__wrapper-text">
+            <p class="modal__text text">Широкий выбор реле измерения и контроля позволяют отслеживать текущие параметры сети и контролировать параметры значения тока и напряжения.</p>
+            <p class="modal__text text">Удобная визуализация состояний с помощью светодиодных индикаторов.</p>
+            <p class="modal__text text">Быстрый монтаж и простая настройка за счет поворотных регуляторов. Возможность изменения параметров и функций в процессе работы без необходимости отключения реле.</p>
+            <p class="modal__text text">Использование реле времени (по запросу) позволяет производить регулировку временных задержек включения/отключения/переключения.</p>
+          </div>
+        </div>
+        <a class="modal__link" href="#contacts" onclick="closePopup()">Связаться с нами</a>
+      </div>
+    </section> -->
+
+    <!-- <section class="main__modal modal modal--second">
+      <div class="modal__container">
+        <h2 class="modal__title title-small">Щит АВР на базе контроллера</h2>
+        <button class="modal__close button" onclick="closePopup()">Закрыть</button>
+        <div class="modal__wrapper">
+          <picture>
+            <source media="(min-width: 1400px)" srcset="img/feature_controllers_desktop@1x.jpg 1x, img/feature_controllers_desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/feature_controllers_tablet@1x.jpg 1x, img/feature_controllers_tablet@2x.jpg 2x">
+            <img class="modal__image" src="img/feature_controllers_mobile@1x.jpg" srcset="img/feature_controllers_mobile@2x.jpg 2x" alt="АВР контроллеры">
+          </picture>
+          <div class="modal__wrapper-text">
+            <p class="modal__text text">Контроллеры АВР выполнены в специальном компактном корпусе, в котором современный дизайн передней панели совмещается с практичностью установки. Графический ЖК-дисплей с подсветкой делает интерфейс пользователя ясным и интуитивно понятным.</p>
+            <p class="modal__text text">Предусмотрена система регистрации статистических данных, позволяющая пользователю понимать режим работы системы.</p>
+            <p class="modal__text text"> Конфигурация входов и выходов может настраиваться пользователем для управления различными условиями применения прибора.</p>
+         </div>
+      </div>
+        <a class="modal__link" href="#contacts" onclick="closePopup()">Связаться с нами</a>
+      </div>
+    </section> -->
+  </main>
+  <!--  -->
+
+  <!-- FOOTER -->
+  <footer class="page__footer footer">
+    <div class="container">
+      <div class="footer__container footer-information">
+        <div class="footer-information__logo">
+          <picture>
+            <source media="(min-width: 1400px)" srcset="img/logo_desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo_tablet_footer.svg">
+            <img class="footer-information__image" src="img/logo_mobile.svg" alt="Логотип Диэлви">
+          </picture>
+        </div>
+
+        <div class="footer-information__nav footer-nav">
+          <ul class="footer-nav__list footer-navigation site-list">
+            <li class="footer-navigation__item">
+              <a class="footer-navigation__link text" href="#feature">Подобрать АВР</a>
+            </li>
+            <li class="footer-navigation__item">
+              <a class="footer-navigation__link text" href="#gallery">Наша продукция</a>
+            </li>
+            <li class="footer-navigation__item">
+              <a class="footer-navigation__link text" href="#about">О компании</a>
+            </li>
+            <li class="footer-navigation__item">
+              <a class="footer-navigation__link text" href="#contacts">Контакты</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__confidentiality">
+        <p class="footer__text text-bold">Политика конфиденциальности</p>
+        <p class="footer__text text-bold">© 2020 Диэлви  Все права защищены</p>
+      </div>
+    </div>
+  </footer>
+  <!--  -->
+
+<script src="js/lory.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/gallery.js"></script>
+</body>
+</html>

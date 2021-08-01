@@ -1,0 +1,20 @@
+@mixin zeroing {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin pseudo {
+  position: absolute;
+  content: "";
+}
+
+@mixin flex {
+  display: flex;
+  flex-wrap: wrap;
+}
