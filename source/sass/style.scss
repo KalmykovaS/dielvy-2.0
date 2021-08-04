@@ -55,19 +55,24 @@ img {
 @import "blocks/footer.scss";
 
 .page {
-  margin: 0 auto;
-  max-width: $desktop-width;
-  min-width: $mobile-width;
+  margin: 0;
   font-family: $font-regular;
   font-size: 14px;
   line-height: 1.2;
   color: $lite-grey;
 }
 
+.page-container {
+  margin: 0 auto;
+  min-width: $mobile-width;
+  width: 100%;
+}
+
 .container {
-  max-width: 1760px;
-  min-width: 290px;
-  padding: 15px;
+  max-width: $desktop-width;
+  min-width: $mobile-width;
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 0 auto;
 }
 

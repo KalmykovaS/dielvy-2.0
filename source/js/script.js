@@ -31,10 +31,4 @@ function closeMenu() {
   navMain.classList.add(`main-nav--closed`)
 }
 
-const header = document.querySelector(`.header`)
-const headerWrapper = header.querySelector(`.header__wrapper`)
-
-window.addEventListener(`scroll`, changeHeaderBackground)
-window.addEventListener(`resize`, changeHeaderBackground)
-
 

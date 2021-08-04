@@ -1,18 +1,23 @@
 .intro {
-  height: 568px;
-  background: url("../img/avr_bg_mobile@1x.png") no-repeat center;
+  min-height: 568px;
+  background: url(../img/header-bg.jpg) 47% 55% no-repeat;
+  background-size: auto;
+  color: $white;
 }
 
 .promo-content {
-  padding-top: 280px;
+  padding-top: 200px;
 }
 
 .promo-content__header {
   font-family: "Rubik Medium", "Arial", sans-serif;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 28px;
-  margin: 0 0 25px;
+  font-size: 26px;
+  text-transform: uppercase;
+}
+
+.promo-content__subheader {
+  font-size: 14px;
 }
 
 .promo-content__text {
@@ -36,7 +41,6 @@
 @media (min-width: 768px) {
   .intro {
     height: 542px;
-    background: url("../img/avr_bg_tablet@1x.png") no-repeat center;
   }
 
   .promo-content {
@@ -65,7 +69,6 @@
 @media (min-width: 1024px) {
   .intro {
     height: 800px;
-    background: url("../img/header-bg.jpg") no-repeat center;
   }
 
   .promo-content {

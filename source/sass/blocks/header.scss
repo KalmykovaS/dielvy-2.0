@@ -1,8 +1,7 @@
 .header {
-  background-color: #16243E;
+  background-color: $white;
   min-height: 55px;
   position: fixed;
-  max-width: 1920px;
   width: 100%;
   top: 0;
   z-index: 50;
@@ -12,7 +11,7 @@
   display: none;
 }
 
-.logo {
+.header__logo {
   padding: 15px 15px 8px;
 }
 
@@ -25,33 +24,30 @@
   height: 17px;
   top: -35px;
   right: 20px;
-}
 
-.main-nav__toggle:active,
-.slider__button:active {
-  outline: none;
+  &:active {
+    outline: none;
+  }
 }
 
 .main-nav--closed .main-nav__toggle::before {
-  content: "";
-  position: absolute;
+  @include pseudo;
   top: 2px;
   right: 1px;
   width: 15px;
   height: 2px;
-  background-color: #ffffff;
-  box-shadow: 0 5px 0 0 #ffffff, 0 10px 0 0 #ffffff;
+  background-color: $dark-blue;
+  box-shadow: 0 5px 0 0 $dark-blue, 0 10px 0 0 $dark-blue;
 }
 
 .main-nav--opened .main-nav__toggle::before,
 .main-nav--opened .main-nav__toggle::after {
-  content: "";
-  position: absolute;
+  @include pseudo;
   top: 8px;
   right: 0;
   width: 18px;
   height: 2px;
-  background-color: #ffffff;
+  background-color: $dark-blue;
 }
 
 .main-nav--opened .main-nav__toggle::before {
@@ -74,46 +70,44 @@
 }
 
 .main-nav--opened::before {
-  content: "";
-  position: absolute;
+  @include pseudo;
   background: rgba(19, 19, 19, 0.65);
   width: 100%;
   min-height: 100vh;
 }
 
-.main-nav--closed .navigation__link {
+.main-nav--closed .main-nav__link {
   display: none;
 }
 
-.main-nav--opened .navigation__link {
+.main-nav--opened .main-nav__link {
   display: block;
 }
 
-.navigation__link {
+.main-nav__link {
+  font-family: $font-semibold;
   display: block;
-  padding: 8px 20px;
+  padding: 12px 20px;
   font-size: 14px;
-  line-height: 18px;
   color: #2D3845;
 }
 
-.main-nav--opened .navigation__link--first {
-  padding-top: 30px;
+.main-nav--opened .main-nav__link--first {
+  padding-top: 40px;
 }
 
-.main-nav--opened .navigation__link--last {
-  font-family: "Rubik Medium", "Arial", sans-serif;
-  font-weight: 500;
+.main-nav--opened .main-nav__link--last {
+  font-family: $font-semibold;
   padding-top: 35px;
-  color: #C0C0C0;
+  color: $blue;
 }
 
 @media (min-width: 768px) {
   .header {
-    min-height: 78px;
+    min-height: 70px;
   }
 
-  .logo {
+  .header__logo {
     padding: 22px 26px 15px;
   }
 
@@ -127,7 +121,7 @@
   .main-nav--closed .main-nav__toggle::before {
     top: 4px;
     width: 22px;
-    box-shadow: 0 7px 0 0 #ffffff, 0 14px 0 0 #ffffff;
+    box-shadow: 0 7px 0 0 $dark-blue, 0 14px 0 0 $dark-blue;
 }
 
   .main-nav--opened .main-nav__toggle::before,
@@ -141,13 +135,12 @@
     left: 47%;
   }
 
-  .navigation__link {
+  .main-nav__link {
     padding: 14px 44px;
     font-size: 18px;
-    line-height: 26px;
   }
 
-  .main-nav--opened .navigation__link--first {
+  .main-nav--opened .main-nav__link--first {
     padding-top: 54px;
   }
 }
@@ -160,55 +153,52 @@
   }
 
   .header__wrapper {
-    display: flex;
+    @include flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     max-width: 1920px;
     margin: 0 auto;
     padding: 35px 80px 20px;
   }
 
   .header__link {
-    width: 15%;
-    border: 1px solid #ffffff;
+    max-width: 192px;
+    background-color: $blue;
     border-radius: 25px;
     height: 50px;
   }
 
-  .logo {
+  .header__logo {
     padding: 0;
     width: 15%;
   }
 
   .main-nav {
-    width: 60%;
+    width: 65%;
   }
 
   .main-nav__toggle {
     display: none;
   }
 
-  .navigation {
-    display: flex;
+  .main-nav__list {
+    @include flex;
     justify-content: center;
-    flex-wrap: wrap;
   }
 
-  .main-nav--closed .navigation__link,
+  .main-nav--closed .main-nav__link,
   .header__link {
     display: block;
     color: #ffffff;
-    padding: 15px 30px;
-    font-family: "Rubik Medium", "Arial", sans-serif;
+    padding: 15px;
+    font-family: $font-semibold;
     font-size: 16px;
-    line-height: 18px;
   }
 
-  .navigation .navigation__link--last {
+  .main-nav__list .main-nav__link--last {
     display: none;
   }
 
-  .main-nav--opened .navigation__link--last {
+  .main-nav--opened .main-nav__link--last {
     padding-top: 70px;
   }
 }
