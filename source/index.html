@@ -35,19 +35,19 @@
           <div class="main-nav__wrapper">
             <ul class="main-nav__list site-list">
               <li class="main-nav__item">
-                <a class="main-nav__link main-nav__link--first" href="#feature" onclick="closeMenu()">Наши преимущества</a>
+                <a class="main-nav__link main-nav__link--first" href="#advantages" onclick="closeMenu()">Наши преимущества</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link" href="#gallery" onclick="closeMenu()">Каталог продукции</a>
+                <a class="main-nav__link" href="#catalog" onclick="closeMenu()">Каталог продукции</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link" href="#about" onclick="closeMenu()">Наши услуги</a>
+                <a class="main-nav__link" href="#service" onclick="closeMenu()">Наши услуги</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link" href="#contacts" onclick="closeMenu()">О компании</a>
+                <a class="main-nav__link" href="#about" onclick="closeMenu()">О компании</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link" href="#contacts" onclick="closeMenu()">Контакты</a>
+                <a class="main-nav__link" href="#contact" onclick="closeMenu()">Контакты</a>
               </li>
               <li class="main-nav__item">
                 <a class="main-nav__link main-nav__link--last" href="tel:+78129821479">+7&nbsp;812&nbsp;982&nbsp;14&nbsp;79</a>
@@ -62,94 +62,242 @@
 
     <!-- MAIN -->
     <main class="page__main main">
+
       <section class="main__intro intro">
-        <div class="container">
-          <div class="intro__wrapper promo">
-            <div class="promo__content promo-content">
-              <h1 class="promo-content__header">Производство электрощитового оборудования</h1>
-              <p class="promo-content__subheader">Разработка распределительных устройств по вашему техническому заданию</p>
-              <button class="main-button" type="button">Отправить запрос</button>
-            </div>
+        <div class="intro__wrapper">
+          <div class="intro__content">
+            <h1 class="intro__title">Производство электрощитового оборудования</h1>
+            <p class="intro__subheader">Разработка распределительных устройств по вашему техническому заданию</p>
+            <button class="intro__button main-button" type="button">Отправить запрос</button>
           </div>
         </div>
       </section>
 
-      <section class="main__feature feature">
-        <a class="anchor" id="feature"></a>
+      <section class="main__advantages advantages">
+        <a class="anchor" id="advantages"></a>
         <div class="container">
-          <h2 class="feature__title sub-header">Подберите АВР под свои задачи</h2>
-          <ul class="feature__list advantages site-list">
+          <h2 class="advantages__title main-title">Наши преимущества</h2>
+          <p class="advantages__subtitle">Есть ряд причин, по&nbsp;которым выбирают именно нашу компанию:</p>
+
+          <ul class="advantages__list site-list">
             <li class="advantages__item">
-              <picture>
-                <source media="(min-width: 1400px)" srcset="img/feature_rkf_desktop@1x.jpg 1x, img/feature_rkf_desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/feature_rkf_tablet@1x.jpg 1x, img/feature_rkf_tablet@2x.jpg 2x">
-                <img class="advantages__image" src="img/feature_rkf_mobile@1x.jpg" srcset="img/feature_rkf_mobile@2x.jpg 2x" alt="АВР с РКФ">
-              </picture>
-              <div class="advantages__content">
-                <div class="advantages__wrapper">
-                  <h3 class="advantages__title title-small">АВР с РКФ</h3>
-                  <p class="advantages__text text">Широкий выбор реле измерения и контроля позволяют отслеживать текущие параметры</p>
-                </div>
-                <a class="advantages__link text text--yellow" onclick="showPopup('.modal--first')">Подробнее</a>
-              </div>
+              <svg class="advantages__icon" width="50" height="33">
+                <use xlink:href="img/sprite.svg#icon-delivery" x="0" y="0"></use>
+              </svg>
+              <p>Бесплатная доставка по&nbsp;Санкт-Петербургу</p>
             </li>
             <li class="advantages__item">
-              <picture>
-                <source media="(min-width: 1400px)" srcset="img/feature_controllers_desktop@1x.jpg 1x, img/feature_controllers_desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/feature_controllers_tablet@1x.jpg 1x, img/feature_controllers_tablet@2x.jpg 2x">
-                <img class="advantages__image" src="img/feature_controllers_mobile@1x.jpg" srcset="img/feature_controllers_mobile@2x.jpg 2x" alt="АВР контроллеры">
-              </picture>
-              <div class="advantages__content">
-                <div class="advantages__wrapper">
-                  <h3 class="advantages__title title-small">АВР контроллеры</h3>
-                  <p class="advantages__text text">Контроллеры АВР выполнены в специальном компактном корпусе, в котором современный</p>
+              <svg class="advantages__icon" width="38" height="39">
+                <use xlink:href="img/sprite.svg#icon-staff" x="0" y="0"></use>
+              </svg>
+              <p>Квалифицированный персонал</p>
+            </li>
+            <li class="advantages__item">
+              <svg class="advantages__icon" width="39" height="39">
+                <use xlink:href="img/sprite.svg#icon-clock" x="0" y="0"></use>
+              </svg>
+              <p>Обработка запроса в&nbsp;кратчайшие сроки</p>
+            </li>
+            <li class="advantages__item">
+              <svg class="advantages__icon" width="38" height="39">
+                <use xlink:href="img/sprite.svg#icon-quality" x="0" y="0"></use>
+              </svg>
+              <p>Обеспечение и&nbsp;поддержание высокого уровня качества продукции</p>
+            </li>
+            <li class="advantages__item">
+              <svg class="advantages__icon" width="36" height="36">
+                <use xlink:href="img/sprite.svg#icon-certificate" x="0" y="0"></use>
+              </svg>
+              <p>Продукция имеет все необходимые сертификаты</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="main__catalog catalog">
+        <a class="anchor" id="catalog"></a>
+        <div class="container">
+          <h2 class="catalog__title main-title">Каталог продукции</h2>
+          <ul class="catalog__list site-list">
+            <li class="catalog__item">
+              <div class="catalog__wrapper">
+                <picture>
+                  <source media="(min-width: 1024px)" srcset="img/catalog-1-desktop@1x.jpg 1x, img/catalog-1-desktop@2x.jpg 2x">
+                  <img class="catalog__image" src="img/catalog-1-mobile@1x.jpg" srcset="img/catalog-1-mobile@2x.jpg 2x" alt="">
+                </picture>
+                <div class="catalog__content">
+                  <h3 class="catalog__subtitle">Главный распределительный щит</h3>
+                  <div class="catalor__button-wrapper">
+                    <a class="catalog__link main-button" onclick="showPopup('.modal--first')">Подробнее</a>
+                    <button class="catalog__button main-button" type="button">Отправить запрос</button>
+                  </div>
                 </div>
-                <a class="advantages__link text text--yellow" onclick="showPopup('.modal--second')">Подробнее</a>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <div class="catalog__wrapper">
+                <picture>
+                  <source media="(min-width: 1024px)" srcset="img/catalog-1-desktop@1x.jpg 1x, img/catalog-1-desktop@2x.jpg 2x">
+                  <img class="catalog__image" src="img/catalog-1-mobile@1x.jpg" srcset="img/catalog-1-mobile@2x.jpg 2x" alt="">
+                </picture>
+                <div class="catalog__content">
+                  <h3 class="catalog__subtitle">Вводно-распределительное устройство</h3>
+                  <div class="catalor__button-wrapper">
+                    <a class="catalog__link main-button" onclick="showPopup('.modal--first')">Подробнее</a>
+                    <button class="catalog__button main-button" type="button">Отправить запрос</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <div class="catalog__wrapper">
+                <picture>
+                  <source media="(min-width: 1024px)" srcset="img/catalog-1-desktop@1x.jpg 1x, img/catalog-1-desktop@2x.jpg 2x">
+                  <img class="catalog__image" src="img/catalog-1-mobile@1x.jpg" srcset="img/catalog-1-mobile@2x.jpg 2x" alt="">
+                </picture>
+                <div class="catalog__content">
+                  <h3 class="catalog__subtitle">Щит распределительный</h3>
+                  <div class="catalor__button-wrapper">
+                    <a class="catalog__link main-button" onclick="showPopup('.modal--first')">Подробнее</a>
+                    <button class="catalog__button main-button" type="button">Отправить запрос</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <div class="catalog__wrapper">
+                <picture>
+                  <source media="(min-width: 1024px)" srcset="img/catalog-1-desktop@1x.jpg 1x, img/catalog-1-desktop@2x.jpg 2x">
+                  <img class="catalog__image" src="img/catalog-1-mobile@1x.jpg" srcset="img/catalog-1-mobile@2x.jpg 2x" alt="">
+                </picture>
+                <div class="catalog__content">
+                  <h3 class="catalog__subtitle">Шкаф автоматического ввода резерва</h3>
+                  <div class="catalor__button-wrapper">
+                    <a class="catalog__link main-button" onclick="showPopup('.modal--first')">Подробнее</a>
+                    <button class="catalog__button main-button" type="button">Отправить запрос</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <div class="catalog__wrapper">
+                <picture>
+                  <source media="(min-width: 1024px)" srcset="img/catalog-1-desktop@1x.jpg 1x, img/catalog-1-desktop@2x.jpg 2x">
+                  <img class="catalog__image" src="img/catalog-1-mobile@1x.jpg" srcset="img/catalog-1-mobile@2x.jpg 2x" alt="">
+                </picture>
+                <div class="catalog__content">
+                  <h3 class="catalog__subtitle">Шкаф управления</h3>
+                  <div class="catalor__button-wrapper">
+                    <a class="catalog__link main-button" onclick="showPopup('.modal--first')">Подробнее</a>
+                    <button class="catalog__button main-button" type="button">Отправить запрос</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <div class="catalog__wrapper">
+                <picture>
+                  <source media="(min-width: 1024px)" srcset="img/catalog-1-desktop@1x.jpg 1x, img/catalog-1-desktop@2x.jpg 2x">
+                  <img class="catalog__image" src="img/catalog-1-mobile@1x.jpg" srcset="img/catalog-1-mobile@2x.jpg 2x" alt="">
+                </picture>
+                <div class="catalog__content">
+                  <h3 class="catalog__subtitle">Щит управления обогревом</h3>
+                  <div class="catalor__button-wrapper">
+                    <a class="catalog__link main-button" onclick="showPopup('.modal--first')">Подробнее</a>
+                    <button class="catalog__button main-button" type="button">Отправить запрос</button>
+                  </div>
+                </div>
               </div>
             </li>
           </ul>
         </div>
       </section>
 
-      <section class="main__about-company about-company">
+      <section class="main__service service">
+        <a class="anchor" id="service"></a>
+        <div class="container">
+          <h2 class="service__title main-title">Наши услуги</h2>
+          <p class="service__subtitle">Наша компания предоставляет следующие услуги:</p>
+
+          <ul class="service__list site-list">
+            <li class="service__item">
+              <div class="service__wrapper">
+                <svg class="service__icon" width="40" height="40">
+                  <use xlink:href="img/sprite.svg#icon-engineering" x="0" y="0"></use>
+                </svg>
+                <h3 class="service__title-list">Проектирование</h3>
+                <p class="service__text-list">Проектируем инженерные системы на объектах разного уровня сложности</p>
+              </div>
+            </li>
+            <li class="service__item">
+              <div class="service__wrapper">
+                <svg class="service__icon" width="40" height="40">
+                  <use xlink:href="img/sprite.svg#icon-electrical" x="0" y="0"></use>
+                </svg>
+                <h3 class="service__title-list">Электромонтаж</h3>
+                <p class="service__text-list">Решаем сложные инженерные задачи, монтируем все виды инженерных систем</p>
+              </div>
+            </li>
+            <li class="service__item">
+              <div class="service__wrapper">
+                <svg class="service__icon" width="40" height="40">
+                  <use xlink:href="img/sprite.svg#icon-box-nku" x="0" y="0"></use>
+                </svg>
+                <h3 class="service__title-list">Производство НКУ</h3>
+                <p class="service__text-list">Квалифицированная сборка электрощитов НКУ по схемам и проектам заказчика</p>
+              </div>
+            </li>
+            <li class="service__item">
+              <div class="service__wrapper">
+                <svg class="service__icon" width="40" height="40">
+                  <use xlink:href="img/sprite.svg#icon-electricity" x="0" y="0"></use>
+                </svg>
+                <h3 class="service__title-list">Поставка материалов</h3>
+                <p class="service__text-list">Осуществляем поставки электроматериалов для вашего проекта</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="main__about about">
         <a class="anchor" id="about"></a>
         <div class="container">
-          <div class="about-company__container presentation">
-            <div class="presentation__content">
-              <h2 class="presentation__title sub-header">О компании</h2>
-              <p class="presentation__text text">ООО «Диэлви» — занимается производством электрощитового оборудования, по типовым и индивидуальным схемам заказчика. Имея многолетний опыт в производстве комплектных устройств низкого и среднего напряжения, постараемся удовлетворить все ваши потребности.</p>
-              <p class="presentation__text text">Осуществим разработку распределительных устройств по вашему техническому заданию.</p>
-              <p class="presentation__text text">Наши специалисты проконсультируют и помогут подобрать оборудование и комплектующие в соотвествии с вашими условиями.</p>
+          <div class="about__wrapper">
+            <div class="about__content">
+              <h2 class="about__title main-title">О компании</h2>
+              <div class="about__text-wrapper">
+                <p class="about__text">ООО «Диэлви» — занимается производством электрощитового оборудования, по типовым и индивидуальным схемам заказчика. Имея многолетний опыт в производстве комплектных устройств низкого и среднего напряжения, постараемся удовлетворить все ваши потребности.</p>
+                <p class="about__text">Осуществим разработку распределительных устройств по вашему техническому заданию.</p>
+                <p class="about__text">Наши специалисты проконсультируют и помогут подобрать оборудование и комплектующие в соотвествии с вашими условиями.</p>
+              </div>
             </div>
-            <div class="presentation__wrapper-image">
+            <div class="about__wrapper-image">
               <picture>
-                <source media="(min-width: 1400px)" srcset="img/logo_about_company_desktop@1x.png 1x,img/logo_about_company_desktop@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/logo_about_company_tablet@1x.png 1x, img/logo_about_company_tablet@2x.png 2x">
-                <img class="presentation__image" src="img/logo_about_company_mobile@1x.png" srcset="img/logo_about_company_mobile@2x.png 2x" alt="Логотип">
+                <source media="(min-width: 1024px)" srcset="img/about-desktop@1x.jpg 1x,img/about-desktop@2x.jpg 2x">
+                <img class="about__image" src="img/about-mobile@1x.jpg" srcset="img/about-mobile@2x.jpg 2x" alt="Логотип">
               </picture>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="main__feedback feedback">
-        <a class="anchor" id="contacts"></a>
-        <div class="container">
-          <h2 class="feedback__title sub-header">Контакты</h2>
-          <div class="feedback__container contacts">
-            <div class="contacts__information">
-              <p class="contacts__text text-bold"><a class="contacts__phone" href="tel:+78129821479">+7&nbsp;812&nbsp;982&nbsp;14&nbsp;79</a></p>
-              <p class="contacts__text text">Выборгское шоссе, 36, Санкт-петербург, Россия</p>
-              <p class="contacts__text text-bold">E-mail: <a class="contacts__mail" href="mailto:office@dlv.spb.ru">office@dlv.spb.ru</a></p>
-            </div>
-            <div class="contacts__map map">
-              <picture>
-                <source media="(min-width: 1400px)" srcset="img/map_desktop@1x.jpg 1x, img/map_desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/map_tablet@1x.jpg 1x, img/map_tablet@2x.jpg 2x">
-                <img class="map__image" src="img/map_mobile@1x.jpg" srcset="img/map_mobile@2x.jpg 2x" alt="Карта Диэлви">
-              </picture>
-            </div>
+      <section class="main__footer footer">
+        <a class="anchor" id="contact"></a>
+        <div class="footer__wrapper container">
+          <h2 class="footer__title main-title">Контакты</h2>
+          <div class="footer__information">
+            <p class="footer__text"><a class="footer__phone" href="tel:+78129821479">+7&nbsp;812&nbsp;982&nbsp;14&nbsp;79</a></p>
+            <p class="footer__text footer__text--large">Выборгское шоссе, 36, Санкт-петербург, Россия</p>
+            <p class="footer__text">E-mail:<br><a class="footer__email" href="mailto:office@dlv.spb.ru">office@dlv.spb.ru</a></p>
           </div>
+        </div>
+        <div class="footer__map">
+          <iframe class="footer__map-interactive" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1992.4192749869953!2d30.313184715856952!3d60.041278881913634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469634ee13cfc3a5%3A0xbd8fc10c5e0c71ac!2z0JLRi9Cx0L7RgNCz0YHQutC-0LUg0YguLCAzNiwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5NDIxNA!5e0!3m2!1sru!2sru!4v1628778411547!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <picture>
+            <source media="(min-width: 1024px)" srcset="img/map-desktop@1x.jpg 1x,img/map-desktop@2x.jpg 2x">
+            <img class="footer__map-image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Карта">
+          </picture>
         </div>
       </section>
 
@@ -194,44 +342,6 @@
         </div>
       </section> -->
     </main>
-    <!--  -->
-
-    <!-- FOOTER -->
-    <footer class="page__footer footer">
-      <div class="container">
-        <div class="footer__container footer-information">
-          <div class="footer-information__logo">
-            <picture>
-              <source media="(min-width: 1400px)" srcset="img/logo_desktop.svg">
-              <source media="(min-width: 768px)" srcset="img/logo_tablet_footer.svg">
-              <img class="footer-information__image" src="img/logo_mobile.svg" alt="Логотип Диэлви">
-            </picture>
-          </div>
-
-          <div class="footer-information__nav footer-nav">
-            <ul class="footer-nav__list footer-navigation site-list">
-              <li class="footer-navigation__item">
-                <a class="footer-navigation__link text" href="#feature">Подобрать АВР</a>
-              </li>
-              <li class="footer-navigation__item">
-                <a class="footer-navigation__link text" href="#gallery">Наша продукция</a>
-              </li>
-              <li class="footer-navigation__item">
-                <a class="footer-navigation__link text" href="#about">О компании</a>
-              </li>
-              <li class="footer-navigation__item">
-                <a class="footer-navigation__link text" href="#contacts">Контакты</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="footer__confidentiality">
-          <p class="footer__text text-bold">Политика конфиденциальности</p>
-          <p class="footer__text text-bold">© 2020 Диэлви  Все права защищены</p>
-        </div>
-      </div>
-    </footer>
     <!--  -->
   </div>
 

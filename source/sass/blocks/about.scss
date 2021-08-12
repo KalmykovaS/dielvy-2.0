@@ -1,12 +1,43 @@
-.about-company {
-  background-color: #ffffff;
-  color: #2D3845;
+.about {
+  padding: 40px 0;
 }
 
-// @media (min-width: 768px) {
+.about__text-wrapper {
+  margin: 25px 0 50px;
+}
 
-// }
+.about__text {
+  font-size: 12px;
+  line-height: 1.4;
+}
 
-// @media (min-width: 1024px) {
+@media (min-width: 768px) {
+  .about__wrapper {
+    @include flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 
-// }
+  .about__content {
+    flex-basis: 50%;
+  }
+
+  .about__wrapper-image {
+    flex-basis: 40%;
+    order: -1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about {
+    padding: 120px 0;
+  }
+
+  .about__title {
+    margin-top: 0;
+  }
+
+  .about__text {
+    font-size: 24px;
+  }
+}

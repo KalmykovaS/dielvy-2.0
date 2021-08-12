@@ -1,6 +1,6 @@
 .header {
   background-color: $white;
-  min-height: 55px;
+  height: 56px;
   position: fixed;
   width: 100%;
   top: 0;
@@ -22,7 +22,7 @@
 .main-nav__toggle {
   width: 17px;
   height: 17px;
-  top: -35px;
+  top: -47px;
   right: 20px;
 
   &:active {
@@ -43,7 +43,7 @@
 .main-nav--opened .main-nav__toggle::before,
 .main-nav--opened .main-nav__toggle::after {
   @include pseudo;
-  top: 8px;
+  top: 22px;
   right: 0;
   width: 18px;
   height: 2px;
@@ -104,7 +104,7 @@
 
 @media (min-width: 768px) {
   .header {
-    min-height: 70px;
+    height: 70px;
   }
 
   .header__logo {
@@ -148,13 +148,14 @@
 @media (min-width: 1024px) {
   .header {
     background-color: transparent;
-    min-height: 84px;
+    height: 84px;
     position: absolute;
   }
 
   .header__wrapper {
     @include flex;
     justify-content: space-between;
+    align-items: center;
     max-width: 1920px;
     margin: 0 auto;
     padding: 35px 80px 20px;

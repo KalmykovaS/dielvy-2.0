@@ -48,9 +48,10 @@ img {
 @import "mixins.scss";
 @import "blocks/header.scss";
 @import "blocks/intro.scss";
-@import "blocks/feature.scss";
+@import "blocks/advantages.scss";
+@import "blocks/catalog.scss";
+@import "blocks/service.scss";
 @import "blocks/about.scss";
-@import "blocks/contacts.scss";
 @import "blocks/modal.scss";
 @import "blocks/footer.scss";
 
@@ -78,14 +79,13 @@ img {
 
 .site-list {
   list-style: none;
-  margin: 0;
   padding: 0;
 }
 
 a.anchor {
   display: block;
   position: relative;
-  top: -55px;
+  top: -60px;
   visibility: hidden;
 }
 
@@ -102,9 +102,57 @@ a.anchor {
   background-color: #3680DB;
   font-size: 12px;
   font-family: $font-semibold;
-  max-width: 200px;
+  min-width: 140px;
   padding: 10px;
-  color: #ffffff;
+  color: $white;
   white-space: nowrap;
   border-radius: 30px;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 16px;
+  font-family: $font-bold;
+  color: $dark-blue;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  a.anchor {
+    top: -80px;
+  }
+
+  .main-title {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page {
+    font-size: 20px;
+  }
+
+  .container {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  a.anchor {
+    top: -115px;
+  }
+
+  .main-button {
+    font-size: 20px;
+    min-width: 170px;
+    padding: 20px;
+  }
+
+  .main-title {
+    font-size: 52px;
+  }
 }

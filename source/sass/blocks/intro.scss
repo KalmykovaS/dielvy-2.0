@@ -3,95 +3,67 @@
   background: url(../img/header-bg.jpg) 47% 55% no-repeat;
   background-size: auto;
   color: $white;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
-.promo-content {
-  padding-top: 200px;
+.intro__content {
+  padding: 200px 15px 0 15px;
+  max-width: 500px;
 }
 
-.promo-content__header {
-  font-family: "Rubik Medium", "Arial", sans-serif;
+.intro__title {
+  font-family: $font-semibold;
   font-weight: 500;
   font-size: 26px;
   text-transform: uppercase;
 }
 
-.promo-content__subheader {
+.intro__subheader {
   font-size: 14px;
 }
 
-.promo-content__text {
-  font-size: 14px;
-  line-height: 18px;
-  margin: 0 0 35px
-}
-
-.promo-content__link {
-  font-family: "Rubik Medium", "Arial", sans-serif;
-  font-weight: 500;
-  display: block;
-  color: #ffffff;
-  padding: 8px 14px;
-  width: 134px;
-  background-color: #EFB509;
-  border-radius: 15px;
-  white-space: nowrap;
+.intro__button {
+  margin-top: 30px;
 }
 
 @media (min-width: 768px) {
   .intro {
-    height: 542px;
+    min-height: 542px;
   }
 
-  .promo-content {
+  .intro__content {
     padding-top: 200px;
-    max-width: 330px;
   }
 
-  .promo-content__header {
-    font-family: "Rubik Medium", "Arial", sans-serif;
-    font-weight: 500;
+  .intro__title {
     font-size: 32px;
-    line-height: 38px;
     margin: 0 0 18px;
-  }
-
-  .promo-content__text {
-    margin: 0 0 25px;
-  }
-
-  .promo-content__link {
-    padding: 8px 22px;
-    width: 168px;
   }
 }
 
 @media (min-width: 1024px) {
   .intro {
-    height: 800px;
+    min-height: 950px;
   }
 
-  .promo-content {
+  .intro__wrapper {
+    padding: 0 150px;
+  }
+
+  .intro__content {
     padding-top: 218px;
-    max-width: 510px;
+    max-width: 860px;
 }
 
-  .promo-content__header {
-    font-size: 56px;
-    line-height: 66px;
+  .intro__title {
+    font-size: 80px;
     margin: 0 0 30px;
-    color: #ffffff;
   }
 
-  .promo-content__text {
-    font-size: 20px;
-    line-height: 36px;
-    margin: 0 0 65px;
-  }
-
-  .promo-content__link {
-    width: 248px;
-    padding: 23px 42px;
-    border-radius: 45px;
+  .intro__subheader {
+    margin: 60px 0;
+    font-size: 24px;
+    max-width: 530px;
   }
 }
