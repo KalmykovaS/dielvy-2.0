@@ -99,7 +99,7 @@ a.anchor {
 
 .main-button {
   border: none;
-  background-color: #3680DB;
+  background-color: $blue;
   font-size: 12px;
   font-family: $font-semibold;
   min-width: 140px;
@@ -108,6 +108,17 @@ a.anchor {
   white-space: nowrap;
   border-radius: 30px;
   text-align: center;
+  cursor: pointer;
+
+  &:focus,
+  &:active,
+  &:hover {
+    background-color: #2860a3;
+    color: $white;
+  }
+  &:disabled {
+    opacity: 0.6;
+  }
 }
 
 .main-title {

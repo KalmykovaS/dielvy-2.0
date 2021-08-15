@@ -14,6 +14,12 @@
     document.createElement("picture");
   </script>
   <script src="js/picturefill.min.js" async=""></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+    emailjs.init("user_eVPWuvd5XiQqRSZ1VbJqs");
+    })();
+  </script>
 </head>
 <body class="page">
 
@@ -68,7 +74,7 @@
           <div class="intro__content">
             <h1 class="intro__title">Производство электрощитового оборудования</h1>
             <p class="intro__subheader">Разработка распределительных устройств по вашему техническому заданию</p>
-            <button class="intro__button main-button" type="button">Отправить запрос</button>
+            <button class="intro__button main-button" type="button" onclick="showPopup('.modal--form')">Отправить запрос</button>
           </div>
         </div>
       </section>
@@ -129,7 +135,7 @@
                   <h3 class="catalog__subtitle">Главный распределительный щит</h3>
                   <div class="catalor__button-wrapper">
                     <a class="catalog__link main-button" onclick="showPopup('.modal--first')">Подробнее</a>
-                    <button class="catalog__button main-button" type="button">Отправить запрос</button>
+                    <button class="catalog__button main-button" type="button" onclick="showPopup('.modal--form')">Отправить запрос</button>
                   </div>
                 </div>
               </div>
@@ -144,7 +150,7 @@
                   <h3 class="catalog__subtitle">Вводно-распределительное устройство</h3>
                   <div class="catalor__button-wrapper">
                     <a class="catalog__link main-button" onclick="showPopup('.modal--first')">Подробнее</a>
-                    <button class="catalog__button main-button" type="button">Отправить запрос</button>
+                    <button class="catalog__button main-button" type="button" onclick="showPopup('.modal--form')">Отправить запрос</button>
                   </div>
                 </div>
               </div>
@@ -159,7 +165,7 @@
                   <h3 class="catalog__subtitle">Щит распределительный</h3>
                   <div class="catalor__button-wrapper">
                     <a class="catalog__link main-button" onclick="showPopup('.modal--first')">Подробнее</a>
-                    <button class="catalog__button main-button" type="button">Отправить запрос</button>
+                    <button class="catalog__button main-button" type="button" onclick="showPopup('.modal--form')">Отправить запрос</button>
                   </div>
                 </div>
               </div>
@@ -174,7 +180,7 @@
                   <h3 class="catalog__subtitle">Шкаф автоматического ввода резерва</h3>
                   <div class="catalor__button-wrapper">
                     <a class="catalog__link main-button" onclick="showPopup('.modal--first')">Подробнее</a>
-                    <button class="catalog__button main-button" type="button">Отправить запрос</button>
+                    <button class="catalog__button main-button" type="button" onclick="showPopup('.modal--form')">Отправить запрос</button>
                   </div>
                 </div>
               </div>
@@ -189,7 +195,7 @@
                   <h3 class="catalog__subtitle">Шкаф управления</h3>
                   <div class="catalor__button-wrapper">
                     <a class="catalog__link main-button" onclick="showPopup('.modal--first')">Подробнее</a>
-                    <button class="catalog__button main-button" type="button">Отправить запрос</button>
+                    <button class="catalog__button main-button" type="button" onclick="showPopup('.modal--form')">Отправить запрос</button>
                   </div>
                 </div>
               </div>
@@ -204,7 +210,7 @@
                   <h3 class="catalog__subtitle">Щит управления обогревом</h3>
                   <div class="catalor__button-wrapper">
                     <a class="catalog__link main-button" onclick="showPopup('.modal--first')">Подробнее</a>
-                    <button class="catalog__button main-button" type="button">Отправить запрос</button>
+                    <button class="catalog__button main-button" type="button" onclick="showPopup('.modal--form')">Отправить запрос</button>
                   </div>
                 </div>
               </div>
@@ -288,7 +294,7 @@
           <h2 class="footer__title main-title">Контакты</h2>
           <div class="footer__information">
             <p class="footer__text"><a class="footer__phone" href="tel:+78129821479">+7&nbsp;812&nbsp;982&nbsp;14&nbsp;79</a></p>
-            <p class="footer__text footer__text--large">Выборгское шоссе, 36, Санкт-петербург, Россия</p>
+            <p class="footer__text footer__text--large">Выборгское шоссе, 36, Санкт-Петербург, Россия</p>
             <p class="footer__text">E-mail:<br><a class="footer__email" href="mailto:office@dlv.spb.ru">office@dlv.spb.ru</a></p>
           </div>
         </div>
@@ -301,52 +307,73 @@
         </div>
       </section>
 
-      <!-- <section class="main__modal modal modal--first">
+      <section class="main__modal modal modal--first">
         <div class="modal__container">
-          <h2 class="modal__title title-small">Щит АВР на базе реле контроля</h2>
+          <h2 class="modal__title">Главный распределительный щит</h2>
           <button class="modal__close button" onclick="closePopup()">Закрыть</button>
           <div class="modal__wrapper">
-            <picture>
-              <source media="(min-width: 1400px)" srcset="img/feature_rkf_desktop@1x.jpg 1x, img/feature_rkf_desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/feature_rkf_tablet@1x.jpg 1x, img/feature_rkf_tablet@2x.jpg 2x">
-              <img class="modal__image" src="img/feature_rkf_mobile@1x.jpg" srcset="img/feature_rkf_mobile@2x.jpg 2x" alt="АВР с РКФ">
+            <picture class="modal__img-wrapper">
+              <source media="(min-width: 1024px)" srcset="img/modal-1-desktop@1x.jpg 1x, img/modal-1-desktop@2x.jpg 2x">
+              <img class="modal__image" src="img/modal-1-mobile@1x.jpg" srcset="img/modal-1-mobile@2x.jpg 2x" alt="АВР с РКФ">
             </picture>
             <div class="modal__wrapper-text">
-              <p class="modal__text text">Широкий выбор реле измерения и контроля позволяют отслеживать текущие параметры сети и контролировать параметры значения тока и напряжения.</p>
-              <p class="modal__text text">Удобная визуализация состояний с помощью светодиодных индикаторов.</p>
-              <p class="modal__text text">Быстрый монтаж и простая настройка за счет поворотных регуляторов. Возможность изменения параметров и функций в процессе работы без необходимости отключения реле.</p>
-              <p class="modal__text text">Использование реле времени (по запросу) позволяет производить регулировку временных задержек включения/отключения/переключения.</p>
+              <p class="modal__text">Главный распределительный щит (ГРЩ) - распределительный щит, через который снабжается электроэнергией все здание или его обособленная часть. Роль ГРЩ может выполнять ВРУ или щит низкого напряжения подстанции. ГРЩ должен соответствовать требованиям ГОСТ 32396, ГОСТ IEC 61439-1.</p>
+              <p class="modal__text">ГРЩ, как правило, должны размещаться в специально выделенных запирающихся помещениях (электрощитовых), доступных только для обслуживающего персонала.</p>
+              <p class="modal__text">ГРЩ конструктивно выполняется в виде металлических конструкций напольного исполнения, которые поделены на функциональные панели, а именно на вводные, секционные и линейные шкафы. Обслуживание шкафов ГРЩ производится с фасада, доступ к ошиновке может осуществляться с задней и/или передней стороны шкафа.</p>
+              <p class="modal__text">Все необходимые расчетные параметры и технические требования к комплектации распределительных устройств определяются в техническом задании, проектной документации.</p>
             </div>
           </div>
-          <a class="modal__link" href="#contacts" onclick="closePopup()">Связаться с нами</a>
+          <button class="modal__button main-button" type="button" onclick="showPopup('.modal--form')">Отправить запрос</button>
         </div>
-      </section> -->
+        <div class="modal__background"></div>
+      </section>
 
-      <!-- <section class="main__modal modal modal--second">
+      <section class="main__modal modal modal--form form">
         <div class="modal__container">
-          <h2 class="modal__title title-small">Щит АВР на базе контроллера</h2>
+          <h2 class="modal__title">Отправить запрос</h2>
           <button class="modal__close button" onclick="closePopup()">Закрыть</button>
           <div class="modal__wrapper">
-            <picture>
-              <source media="(min-width: 1400px)" srcset="img/feature_controllers_desktop@1x.jpg 1x, img/feature_controllers_desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/feature_controllers_tablet@1x.jpg 1x, img/feature_controllers_tablet@2x.jpg 2x">
-              <img class="modal__image" src="img/feature_controllers_mobile@1x.jpg" srcset="img/feature_controllers_mobile@2x.jpg 2x" alt="АВР контроллеры">
-            </picture>
-            <div class="modal__wrapper-text">
-              <p class="modal__text text">Контроллеры АВР выполнены в специальном компактном корпусе, в котором современный дизайн передней панели совмещается с практичностью установки. Графический ЖК-дисплей с подсветкой делает интерфейс пользователя ясным и интуитивно понятным.</p>
-              <p class="modal__text text">Предусмотрена система регистрации статистических данных, позволяющая пользователю понимать режим работы системы.</p>
-              <p class="modal__text text"> Конфигурация входов и выходов может настраиваться пользователем для управления различными условиями применения прибора.</p>
+            <form class="modal__form" action="" method="post" id="contacts-form">
+              <p class="modal__field">
+                <input class="modal__input" type="text" name="name" id="contacts-name" placeholder="Имя">
+              </p>
+              <p class="modal__field">
+                <input class="modal__input" type="email" name="email" id="contacts-email" placeholder="E-mail">
+              </p>
+              <button class="modal__button main-button" type="submit" id="contacts-submit">Отправить</button>
+            </form>
+          </div>
+          <p class="modal__personal">Нажимая на кнопку, вы даете согласие<br><a class="modal__personal-link" href="files/personal-data.pdf">на обработку своих персональных данных</a></p>
+        </div>
+        <div class="modal__background">
+        </div>
+      </section>
+
+      <section class="main__modal modal modal--request request" id="request-popup">
+        <div class="modal__container">
+          <h2 class="modal__title">Запрос отправлен</h2>
+          <button class="modal__close button" onclick="closePopup()">Закрыть</button>
+          <div class="modal__wrapper">
+            <p class="modal__text">Ваш запрос успешно отправлен. Мы свяжемся с вами в ближайшее рабочее время.</p>
           </div>
         </div>
-          <a class="modal__link" href="#contacts" onclick="closePopup()">Связаться с нами</a>
+        <div class="modal__background">
         </div>
-      </section> -->
+      </section>
+
+      <section class="main__modal modal modal--request request" id="false-popup">
+        <div class="modal__container">
+          <h2 class="modal__title">Не удалось отправить запрос</h2>
+          <button class="modal__close button" onclick="closePopup()">Закрыть</button>
+          <div class="modal__wrapper">
+            <p class="modal__text">Пожалуйста, напишите нам на почту <a class="modal__email" href="mailto:office@dlv.spb.ru">office@dlv.spb.ru</a></p>
+          </div>
+        </div>
+      </section>
     </main>
     <!--  -->
   </div>
 
-  <script src="js/lory.min.js" defer></script>
   <script src="js/script.js" defer></script>
-  <script src="js/gallery.js" defer></script>
 </body>
 </html>
