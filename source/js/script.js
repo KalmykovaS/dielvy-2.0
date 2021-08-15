@@ -2,9 +2,6 @@
 
 const modalOpenedClass = `modal--opened`;
 
-
-
-
 function closePopup() {
   document.querySelectorAll(`.${modalOpenedClass}`).forEach((element) => {
     element.classList.remove(modalOpenedClass);
@@ -52,9 +49,11 @@ document.getElementById('contacts-form')
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
       btn.disabled = false;
+      closePopup();
       requestPopup.classList.add('modal--opened');
     }, (err) => {
       btn.disabled = false;
+      closePopup();
       falsePopup.classList.add('modal--opened');
       console.log(JSON.stringify(err));
     });
