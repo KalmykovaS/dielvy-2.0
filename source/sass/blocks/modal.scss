@@ -48,6 +48,10 @@
     text-align: center;
 }
 
+.modal__title--desktop {
+    display: none;
+}
+
 .modal__button {
     width: calc(100% - 40px);
     height: 40px;
@@ -63,6 +67,7 @@
 
 .modal__text {
     font-size: 12px;
+    text-align: justify;
 }
 
 .modal__image {
@@ -211,6 +216,12 @@
         font-size: 21px;
         line-height: 25px;
         margin-top: 0;
+    }
+    .modal__title--desktop {
+        display: block;
+    }
+    .modal__title--mobile {
+        display: none;
     }
     .modal__img-wrapper {
         max-width: 35%;

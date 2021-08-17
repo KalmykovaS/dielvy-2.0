@@ -68,21 +68,10 @@
     }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1420px) {
     .catalog__list {
         justify-content: flex-start;
     }
-    .catalog__item {
-        flex-basis: 25%;
-    }
-    .catalog__wrapper {
-        max-width: 270px;
-        margin: 0;
-        margin-right: 15px;
-    }
-}
-
-@media (min-width: 1420px) {
     .catalog__item {
         flex-basis: 25%;
     }
