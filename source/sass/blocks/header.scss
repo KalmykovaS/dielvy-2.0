@@ -160,7 +160,6 @@
         max-width: 192px;
         background-color: $blue;
         border-radius: 25px;
-        height: 50px;
     }
     .header__logo {
         padding: 0;
@@ -180,15 +179,23 @@
     .header__link {
         display: block;
         color: #ffffff;
-        padding: 15px;
+        padding: 10px;
         font-family: $font-semibold;
-        font-size: 16px;
+        font-size: 12px;
     }
     .main-nav__list .main-nav__link--last {
         display: none;
     }
     .main-nav--opened .main-nav__link--last {
         padding-top: 70px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .main-nav--closed .main-nav__link,
+    .header__link {
+        padding: 15px;
+        font-size: 15px;
     }
 }
 
