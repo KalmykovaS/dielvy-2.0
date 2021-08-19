@@ -21,7 +21,7 @@
     .about__wrapper {
         @include flex;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
     }
     .about__content {
         flex-basis: 50%;
